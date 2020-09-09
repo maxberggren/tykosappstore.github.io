@@ -1,0 +1,130 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tykos AppStore</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+
+<style>
+    @keyframes spinner-border {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .spinner-border {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        vertical-align: text-bottom;
+        border: .25em solid currentColor;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner-border .75s linear infinite;
+        animation: spinner-border .75s linear infinite;
+    }
+
+    .spinner-border-sm {
+        height: 1rem;
+        width: 1rem;
+        border-width: .2em;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Tykos AppStore</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="tykos.html">Start</a></li>
+                        <li><a href="clowats.html">Clowats</a></li>
+                        <li><a href="kartor.html">Kartspelet</a></li>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+
+        <p>Hej och välkomna till Tykos AppStore. Välj vilket spel du vill spela!<br /><br /><br /></p>
+
+        <div class="row placeholders">
+            <a href="clowats.html">
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="clowats.png" width="200" height="200" class="img-responsive"
+                        alt="Generic placeholder thumbnail">
+                    <h4>Clowats</h4>
+                    <span class="text-muted">Clowats är ett häftigt spel som man kan använda med alla roller. Det
+                        handlar om
+                        att göra ett öventyr i skogen.</span><br /><br />
+
+                    <a class="btn btn-primary" href="#" role="button" id="clowats-kop">Köp: 15 kr</a>
+                </div>
+            </a>
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                <h4>Kartspelet</h4>
+                <span class="text-muted">Kartspelet handlar om att hitta vilken väg du hittar till hemliga
+                    dalen.</span><br /><br />
+
+                <a class="btn btn-primary" href="#" role="button" disabled="true">Köp: 14 kr</a>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                <h4>ToGoGo</h4>
+                <span class="text-muted">Battle Royalspel där två är inne i ett glasrum. Brevid det glasrummet så finns
+                    det ett till glasrum och i det glasrummet finns det två personer. Sen ska man brottas i
+                    glasrummet.</span><br /><br />
+
+                <a class="btn btn-primary" href="#" role="button" disabled="true">Köp: 20 kr</a>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                <h4>Staden</h4>
+                <span class="text-muted">Staden kan man bygga med Clowats-hus och man kan bygga sin
+                    favoritstation.</span><br /><br />
+
+                <a class="btn btn-primary" href="#" role="button" disabled="true">Köp: 18 kr</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#clowats-kop").click(function () {
+                // add spinner to button
+                $(this).html(
+                    `<span class="spinner-border" role="status" aria-hidden="true"></span> Behandlar ditt köp...`
+                );
+                setTimeout(function () {
+                    $("#clowats-kop").html(
+                        `Välkommen ombord!`
+                    );
+                }, 1000);
+            });
+        });        
+    </script>
+
+</body>
+
+</html>
